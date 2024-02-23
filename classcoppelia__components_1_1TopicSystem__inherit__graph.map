@@ -1,5 +1,0 @@
-<map id="coppelia_components::TopicSystem" name="coppelia_components::TopicSystem">
-<area shape="rect" id="Node000001" title="Hardware interface to integrate CoppeliaSim with ros2 control." alt="" coords="5,94,153,135"/>
-<area shape="rect" id="Node000002" title=" " alt="" coords="13,5,145,46"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="82,62,82,94,76,94,76,62"/>
-</map>

@@ -1,0 +1,5 @@
+<map id="send_action_goal" name="send_action_goal">
+<area shape="rect" id="Node000001" title="node tree to send a request to the action server that moves the robot" alt="" coords="16,109,138,135"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,5,149,61"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="80,76,80,108,74,108,74,76"/>
+</map>

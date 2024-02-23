@@ -1,0 +1,5 @@
+<map id="check_human_movement" name="check_human_movement">
+<area shape="rect" id="Node000001" title="node tree to check if the human moves while the robot is handing over the object so that we can enfor..." alt="" coords="5,79,176,105"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="20,5,161,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="93,46,93,79,88,79,88,46"/>
+</map>

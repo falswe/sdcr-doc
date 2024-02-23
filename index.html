@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Coppelia Components: Topic System</title>
+<title>Coppelia Components: Main Page</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -68,44 +68,10 @@ $(function() {
 </div>
 </div>
 
-<div><div class="header">
-  <div class="headertitle"><div class="title">Topic System </div></div>
+<div class="header">
+  <div class="headertitle"><div class="title">Coppelia Components Documentation</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><h1><a class="anchor" id="intro_sec"></a>
-Introduction</h1>
-<p>This is a simple hw interface that permits to integrate CoppeliaSim into the ros2_control loop using a topic based system</p>
-<h1><a class="anchor" id="brief_desc"></a>
-Usage</h1>
-<p>This interface supports joints (includic mimic ones) and sensors.</p>
-<p>To use this interface declare inside the urdf an hardware of type coppelia_components/TopicSystem The required parameters are:</p><ul>
-<li><b>joint_cmd_topic</b>: used to specify the name of the topic to send joint commands to CoppeliaSim, the type of the topic has to be std_msgs/msg/Float64MultiArray</li>
-<li><b>joint_state_topic</b>: used to specify the name of the topic to read joint states from CoppeliaSim, the type of the topic has to be sensor_msgs/msg/JointState</li>
-</ul>
-<p>The supported interfaces for joints are the ones supported by the JointState msg:</p><ul>
-<li><b>position</b></li>
-<li><b>velocity</b></li>
-<li><b>effort</b></li>
-</ul>
-<p>For sensors you can declare any type of state interface, an associated cmd interface will be created so that the values can be update using a standard ros2 forward controller or a custom made one, if needed. This has the the same effect as setting to true mock_sensor_commands in the ros2 mock_components/GenericSystem</p>
-<h1><a class="anchor" id="brief_ex"></a>
-Example usage</h1>
-<p>This is a minimal example of a System that uses this interface, declared inside a urdf</p>
-<pre class="fragment">   &lt;ros2_control name="my_robot" type="system"&gt;
-       &lt;hardware&gt;
-           &lt;plugin&gt;coppelia_components/TopicSystem&lt;/plugin&gt;
-           &lt;param name="joint_cmd_topic"&gt;coppelia_set&lt;/param&gt;
-           &lt;param name="joint_state_topic"&gt;coppelia_joint&lt;/param&gt;
-       &lt;/hardware&gt;
-       &lt;joint name="my_robot_joint"&gt;
-           &lt;command_interface name="position"/&gt;
-           &lt;state_interface name="position"&gt;
-               &lt;param name="initial_value"&gt;0.0&lt;/param&gt;
-           &lt;/state_interface&gt;
-           &lt;state_interface name="velocity"/&gt;
-       &lt;/joint&gt;
-   &lt;/ros2_control&gt;
-</pre> </div></div><!-- PageDoc -->
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
