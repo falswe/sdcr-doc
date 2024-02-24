@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Coppelia Components: Main Page</title>
+<title>Coppelia Components: MTC package</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -68,10 +68,38 @@ $(function() {
 </div>
 </div>
 
-<div class="header">
-  <div class="headertitle"><div class="title">Coppelia Components Documentation</div></div>
+<div><div class="header">
+  <div class="headertitle"><div class="title">MTC package </div></div>
 </div><!--header-->
 <div class="contents">
+<div class="textblock"><h1><a class="anchor" id="intro_sec"></a>
+Introduction</h1>
+<p>This package is contains the necessary logic to command and control the robot at high level to interact with the human. The package is designed as a client-server architecture where the client control the enviroment and sends requests accordingly while the server receives the requests and operates the robot at high level via the MoveIt task constructor. Here is a UML diagram to better explain the architecutre of the system:</p>
+<pre class="fragment">   PUT IMAGE HERE
+</pre><h1><a class="anchor" id="client_sec"></a>
+MTC Client</h1>
+<p>The mtc client uses the behaviour tree library with the ros2 wrapper to control the behaviour of the robot at runtime based on the available data and the current state of the enviroment. The tree can be seen as a state machine and easily explained with an UML diagram:</p>
+<pre class="fragment">   PUT IMAGE HERE
+</pre><p>The necessary data from the enviroment is read by the client using topics in CoppeliaSim which publish the position of the target object and of the target human in real time. These topics utilize custom msgs that have been included in Coppelia's ros2 interface:</p><ul>
+<li><b>human_msgs/msg/HumanMsg</b>: this msg contains the center of the human (collision approximated to a box) and the taget position of the object for the handover. This position is at the tip of the right hand of the human.</li>
+<li><b>cylinder_msgs/msg/CylinderMsg</b>: publishes the information of the target object (a cylinder) offering the same data that <b>shape_msgs/msg/SolidPrimitive</b> would offer but in a more compact way (SolidPrimitive was not used due to a bug with the Coppelia interface).</li>
+</ul>
+<p>The client also implements an emergency stop in caso of sudden movement of the human during the execution of the calculated handover to avoid unpredictable collisions halting the robot instantly.</p>
+<h1><a class="anchor" id="server_sec"></a>
+MTC Server</h1>
+<p>The mtc server handles the requests and operates the robot via the MoveIt task constructor and, at low level, via hw interface and controllers from ros2 control. Upon the arrival of a request the server receives the object postion, the goal position and the human position; this data is used to calculate a chain of simple tasks to execute the handover. The simple tasks are:</p><ul>
+<li>open hand</li>
+<li>move to pick the object</li>
+<li>pick the object (close hand)</li>
+<li>lift it from the table</li>
+<li>move to goal position</li>
+<li>open hand (handover)</li>
+<li>retreat</li>
+<li>return home (starting position)</li>
+</ul>
+<p>These steps are planned using MoveIt, as a solver BiRTT is used as it proved to be the fastest option after comparisons with the other available options. After an high level solution is found the robot is moved at low level using the configured controllers while the server deals for possible halt requests in case of emergency.</p>
+<p>Note: Due to the random nature of BiRTT the server might fail multiple times to find a fasible plan before finding a solution. In theory we could go on forever until a soluton is found. For convenience however the server stops after 5 consecutive fails and returns an error code </p>
+</div></div><!-- PageDoc -->
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
