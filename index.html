@@ -74,13 +74,17 @@ $(function() {
 <div class="contents">
 <div class="textblock"><h1><a class="anchor" id="intro_sec"></a>
 Introduction</h1>
-<p>This package is contains the necessary logic to command and control the robot at high level to interact with the human. The package is designed as a client-server architecture where the client control the enviroment and sends requests accordingly while the server receives the requests and operates the robot at high level via the MoveIt task constructor. Here is a UML diagram to better explain the architecutre of the system:</p>
-<pre class="fragment">   PUT IMAGE HERE
-</pre><h1><a class="anchor" id="client_sec"></a>
+<p>This package is contains the necessary logic to command and control the robot at high level to interact with the human. The package is designed as a client-server architecture where the client control the enviroment and sends requests accordingly while the server receives the requests and operates the robot at high level via the MoveIt task constructor. Here is a diagram to better explain the architecutre of the system:</p>
+<div class="image">
+<img src="Pkg_diagram.jpg" alt=""/>
+</div>
+<h1><a class="anchor" id="client_sec"></a>
 MTC Client</h1>
-<p>The mtc client uses the behaviour tree library with the ros2 wrapper to control the behaviour of the robot at runtime based on the available data and the current state of the enviroment. The tree can be seen as a state machine and easily explained with an UML diagram:</p>
-<pre class="fragment">   PUT IMAGE HERE
-</pre><p>The necessary data from the enviroment is read by the client using topics in CoppeliaSim which publish the position of the target object and of the target human in real time. These topics utilize custom msgs that have been included in Coppelia's ros2 interface:</p><ul>
+<p>The mtc client uses the behaviour tree library with the ros2 wrapper to control the behaviour of the robot at runtime based on the available data and the current state of the enviroment. The tree can be seen as a state machine and easily explained with a diagram:</p>
+<div class="image">
+<img src="d1.jpg" alt=""/>
+</div>
+<p>The necessary data from the enviroment is read by the client using topics in CoppeliaSim which publish the position of the target object and of the target human in real time. These topics utilize custom msgs that have been included in Coppelia's ros2 interface:</p><ul>
 <li><b>human_msgs/msg/HumanMsg</b>: this msg contains the center of the human (collision approximated to a box) and the taget position of the object for the handover. This position is at the tip of the right hand of the human.</li>
 <li><b>cylinder_msgs/msg/CylinderMsg</b>: publishes the information of the target object (a cylinder) offering the same data that <b>shape_msgs/msg/SolidPrimitive</b> would offer but in a more compact way (SolidPrimitive was not used due to a bug with the Coppelia interface).</li>
 </ul>
