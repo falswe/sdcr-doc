@@ -120,23 +120,23 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>};</div>
 </div>
 <div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span> </div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span><span class="keyword">namespace </span>BT{</div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    <span class="keyword">template</span> &lt;&gt; </div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    <span class="keyword">inline</span> human_msgs::msg::Human convertFromString(StringView str){</div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>        <span class="keyword">auto</span> parts = BT::splitString(str, <span class="charliteral">&#39;;&#39;</span>);</div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>        assert(parts.size() == 6);</div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>        human_msgs::msg::Human msg;</div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>        msg.pose.position.x = BT::convertFromString&lt;double&gt;(parts[0]);</div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>        msg.pose.position.y = BT::convertFromString&lt;double&gt;(parts[1]);</div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>        msg.pose.position.z = BT::convertFromString&lt;double&gt;(parts[2]);</div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>        msg.goal_position.x = BT::convertFromString&lt;double&gt;(parts[3]);</div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>        msg.goal_position.y = BT::convertFromString&lt;double&gt;(parts[4]);</div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>        msg.goal_position.z = BT::convertFromString&lt;double&gt;(parts[5]);</div>
-<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span> </div>
-<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>        <span class="keywordflow">return</span> msg;</div>
-<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>    }</div>
-<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>}</div>
-<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span> </div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span><span class="keyword">namespace </span>BT{</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    <span class="keyword">template</span> &lt;&gt; </div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>    <span class="keyword">inline</span> human_msgs::msg::Human convertFromString(StringView str){</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>        <span class="keyword">auto</span> parts = BT::splitString(str, <span class="charliteral">&#39;;&#39;</span>);</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>        assert(parts.size() == 6);</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>        human_msgs::msg::Human msg;</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>        msg.pose.position.x = BT::convertFromString&lt;double&gt;(parts[0]);</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>        msg.pose.position.y = BT::convertFromString&lt;double&gt;(parts[1]);</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>        msg.pose.position.z = BT::convertFromString&lt;double&gt;(parts[2]);</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>        msg.goal_position.x = BT::convertFromString&lt;double&gt;(parts[3]);</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>        msg.goal_position.y = BT::convertFromString&lt;double&gt;(parts[4]);</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>        msg.goal_position.z = BT::convertFromString&lt;double&gt;(parts[5]);</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span> </div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>        <span class="keywordflow">return</span> msg;</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>    }</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>}</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span> </div>
 <div class="ttc" id="aclasscheck__human__distance_html"><div class="ttname"><a href="classcheck__human__distance.html">check_human_distance</a></div><div class="ttdoc">node tree the checks the position of the human in respect to the robot's one</div><div class="ttdef"><b>Definition</b> check_human_distance.hpp:20</div></div>
 <div class="ttc" id="aclasscheck__human__distance_html_a7a7afd012e5e27217bebb4e14e1f58d6"><div class="ttname"><a href="classcheck__human__distance.html#a7a7afd012e5e27217bebb4e14e1f58d6">check_human_distance::providedPorts</a></div><div class="ttdeci">static BT::PortsList providedPorts()</div><div class="ttdoc">override of the helper function of behaviour trees used to tell which part of the blackboard the node...</div><div class="ttdef"><b>Definition</b> check_human_distance.cpp:11</div></div>
 <div class="ttc" id="aclasscheck__human__distance_html_a92d40a85af79f705192a672ba682a6aa"><div class="ttname"><a href="classcheck__human__distance.html#a92d40a85af79f705192a672ba682a6aa">check_human_distance::euclidean_distance</a></div><div class="ttdeci">constexpr double euclidean_distance(const point &amp;p1, const point &amp;p2)</div><div class="ttdoc">helper function to calculate the euclidean distance in 3D space</div><div class="ttdef"><b>Definition</b> check_human_distance.hpp:57</div></div>
