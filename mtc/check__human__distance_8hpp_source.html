@@ -113,8 +113,8 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    <span class="keyword">static</span> BT::PortsList <a class="code hl_function" href="classcheck__human__distance.html#a7a7afd012e5e27217bebb4e14e1f58d6">providedPorts</a>();</div>
 <div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span> </div>
 <div class="foldopen" id="foldopen00062" data-start="{" data-end="}">
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno"><a class="line" href="classcheck__human__distance.html#a92d40a85af79f705192a672ba682a6aa">   62</a></span>    <span class="keyword">inline</span> <span class="keyword">constexpr</span> <span class="keywordtype">double</span> <a class="code hl_function" href="classcheck__human__distance.html#a92d40a85af79f705192a672ba682a6aa">euclidean_distance</a>(<span class="keyword">const</span> point &amp;p1, <span class="keyword">const</span> point &amp;p2)</div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    {</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno"><a class="line" href="classcheck__human__distance.html#a92d40a85af79f705192a672ba682a6aa">   62</a></span>    <span class="keyword">inline</span> <span class="keyword">constexpr</span> <span class="keywordtype">double</span> <a class="code hl_function" href="classcheck__human__distance.html#a92d40a85af79f705192a672ba682a6aa">euclidean_distance</a>(<span class="keyword">const</span> point &amp;p1,</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>                                               <span class="keyword">const</span> point &amp;p2) {</div>
 <div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>        <span class="keywordflow">return</span> (p1.x - p2.x) * (p1.x - p2.x) + (p1.y - p2.y) * (p1.y - p2.y) +</div>
 <div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>               (p1.z - p2.z) * (p1.z - p2.z);</div>
 <div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>    }</div>
@@ -122,27 +122,25 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>};</div>
 </div>
 <div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span> </div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span><span class="keyword">namespace </span>BT</div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>{</div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span><span class="keyword">template</span> &lt;&gt; <span class="keyword">inline</span> human_msgs::msg::Human convertFromString(StringView str)</div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>{</div>
-<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>    <span class="keyword">auto</span> parts = BT::splitString(str, <span class="charliteral">&#39;;&#39;</span>);</div>
-<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>    assert(parts.size() == 6);</div>
-<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>    human_msgs::msg::Human msg;</div>
-<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>    msg.pose.position.x = BT::convertFromString&lt;double&gt;(parts[0]);</div>
-<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>    msg.pose.position.y = BT::convertFromString&lt;double&gt;(parts[1]);</div>
-<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>    msg.pose.position.z = BT::convertFromString&lt;double&gt;(parts[2]);</div>
-<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>    msg.goal_position.x = BT::convertFromString&lt;double&gt;(parts[3]);</div>
-<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>    msg.goal_position.y = BT::convertFromString&lt;double&gt;(parts[4]);</div>
-<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>    msg.goal_position.z = BT::convertFromString&lt;double&gt;(parts[5]);</div>
-<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span> </div>
-<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>    <span class="keywordflow">return</span> msg;</div>
-<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>}</div>
-<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>}</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span><span class="keyword">namespace </span>BT {</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span><span class="keyword">template</span> &lt;&gt; <span class="keyword">inline</span> human_msgs::msg::Human convertFromString(StringView str) {</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>    <span class="keyword">auto</span> parts = BT::splitString(str, <span class="charliteral">&#39;;&#39;</span>);</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>    assert(parts.size() == 6);</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>    human_msgs::msg::Human msg;</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>    msg.pose.position.x = BT::convertFromString&lt;double&gt;(parts[0]);</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>    msg.pose.position.y = BT::convertFromString&lt;double&gt;(parts[1]);</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>    msg.pose.position.z = BT::convertFromString&lt;double&gt;(parts[2]);</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>    msg.goal_position.x = BT::convertFromString&lt;double&gt;(parts[3]);</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>    msg.goal_position.y = BT::convertFromString&lt;double&gt;(parts[4]);</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>    msg.goal_position.z = BT::convertFromString&lt;double&gt;(parts[5]);</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span> </div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>    <span class="keywordflow">return</span> msg;</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>}</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>}</div>
 <div class="ttc" id="aclasscheck__human__distance_html"><div class="ttname"><a href="classcheck__human__distance.html">check_human_distance</a></div><div class="ttdoc">Node tree that checks the position of the human in respect to the robot's position.</div><div class="ttdef"><b>Definition</b> check_human_distance.hpp:24</div></div>
 <div class="ttc" id="aclasscheck__human__distance_html_a7a7afd012e5e27217bebb4e14e1f58d6"><div class="ttname"><a href="classcheck__human__distance.html#a7a7afd012e5e27217bebb4e14e1f58d6">check_human_distance::providedPorts</a></div><div class="ttdeci">static BT::PortsList providedPorts()</div><div class="ttdoc">Override of the helper function of behaviour trees Used to specify which part of the blackboard the n...</div><div class="ttdef"><b>Definition</b> check_human_distance.cpp:12</div></div>
 <div class="ttc" id="aclasscheck__human__distance_html_a92d40a85af79f705192a672ba682a6aa"><div class="ttname"><a href="classcheck__human__distance.html#a92d40a85af79f705192a672ba682a6aa">check_human_distance::euclidean_distance</a></div><div class="ttdeci">constexpr double euclidean_distance(const point &amp;p1, const point &amp;p2)</div><div class="ttdoc">Helper function to calculate the Euclidean distance in 3D space.</div><div class="ttdef"><b>Definition</b> check_human_distance.hpp:62</div></div>
-<div class="ttc" id="aclasscheck__human__distance_html_aa4871e734ca5ee9a6acd2a4ae320ad5f"><div class="ttname"><a href="classcheck__human__distance.html#aa4871e734ca5ee9a6acd2a4ae320ad5f">check_human_distance::tick</a></div><div class="ttdeci">BT::NodeStatus tick() override</div><div class="ttdoc">Checks if the human is within the robot range or not.</div><div class="ttdef"><b>Definition</b> check_human_distance.cpp:39</div></div>
+<div class="ttc" id="aclasscheck__human__distance_html_aa4871e734ca5ee9a6acd2a4ae320ad5f"><div class="ttname"><a href="classcheck__human__distance.html#aa4871e734ca5ee9a6acd2a4ae320ad5f">check_human_distance::tick</a></div><div class="ttdeci">BT::NodeStatus tick() override</div><div class="ttdoc">Checks if the human is within the robot range or not.</div><div class="ttdef"><b>Definition</b> check_human_distance.cpp:37</div></div>
 <div class="ttc" id="aclasscheck__human__distance_html_ad2e299ccadd9ae686785fd64b6977622"><div class="ttname"><a href="classcheck__human__distance.html#ad2e299ccadd9ae686785fd64b6977622">check_human_distance::base_link</a></div><div class="ttdeci">geometry_msgs::msg::Point base_link</div><div class="ttdoc">Position of the base_link of the robot in the 3D world.</div><div class="ttdef"><b>Definition</b> check_human_distance.hpp:29</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
