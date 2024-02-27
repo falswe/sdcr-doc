@@ -1,6 +1,6 @@
 <map id="/github/workspace/src/mtc/mtc_server/src/mtc_server_node.cpp" name="/github/workspace/src/mtc/mtc_server/src/mtc_server_node.cpp">
-<area shape="rect" id="Node000001" title="implementation of the MTCActionServer" alt="" coords="1247,5,1411,61"/>
-<area shape="rect" id="Node000002" href="$mtc__server__node_8hpp.html" title="header of the MTCActionServer that moves the robot using moveit" alt="" coords="1251,109,1407,150"/>
+<area shape="rect" id="Node000001" title="Implementation of the MTCActionServer." alt="" coords="1247,5,1411,61"/>
+<area shape="rect" id="Node000002" href="$mtc__server__node_8hpp.html" title="Header of the MTCActionServer that moves the robot using MoveIt." alt="" coords="1251,109,1407,150"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="1332,62,1332,94,1326,94,1326,62"/>
 <area shape="rect" id="Node000003" title=" " alt="" coords="5,213,125,238"/>
 <area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="1251,135,1010,141,688,153,369,172,237,185,138,200,107,209,106,204,136,195,237,180,369,167,688,147,1010,135,1251,129"/>

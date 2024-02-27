@@ -1,5 +1,5 @@
 <map id="/github/workspace/src/mtc/mtc_client/include/mtc_client/read_coppelia_cylinder_data.hpp" name="/github/workspace/src/mtc/mtc_client/include/mtc_client/read_coppelia_cylinder_data.hpp">
-<area shape="rect" id="Node000001" title="header of the specialized read_coppelia_cylinder_data tree node that reads the cylinder position from..." alt="" coords="321,5,490,76"/>
+<area shape="rect" id="Node000001" title="Header file for the specialized read_coppelia_cylinder_data tree node that reads the cylinder positio..." alt="" coords="321,5,490,76"/>
 <area shape="rect" id="Node000002" title=" " alt="" coords="5,132,83,157"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="321,65,213,92,95,127,90,128,88,123,94,121,212,87,320,59"/>
 <area shape="rect" id="Node000003" title=" " alt="" coords="107,132,312,157"/>

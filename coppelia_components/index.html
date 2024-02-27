@@ -74,23 +74,23 @@ $(function() {
 <div class="contents">
 <div class="textblock"><h1><a class="anchor" id="intro_sec"></a>
 Introduction</h1>
-<p>This is a simple hw interface that permits to integrate CoppeliaSim into the ros2_control loop using a topic based system</p>
+<p>This is a simple hardware interface that allows integration of CoppeliaSim into the ros2_control loop using a topic-based system.</p>
 <h1><a class="anchor" id="brief_desc"></a>
 Usage</h1>
-<p>This interface supports joints (includic mimic ones) and sensors.</p>
-<p>To use this interface declare inside the urdf an hardware of type coppelia_components/TopicSystem The required parameters are:</p><ul>
-<li><b>joint_cmd_topic</b>: used to specify the name of the topic to send joint commands to CoppeliaSim, the type of the topic has to be std_msgs/msg/Float64MultiArray</li>
-<li><b>joint_state_topic</b>: used to specify the name of the topic to read joint states from CoppeliaSim, the type of the topic has to be sensor_msgs/msg/JointState</li>
+<p>This interface supports joints (including mimic ones) and sensors.</p>
+<p>To use this interface, declare inside the URDF a hardware of type coppelia_components/TopicSystem. The required parameters are:</p><ul>
+<li><b>joint_cmd_topic</b>: Used to specify the name of the topic to send joint commands to CoppeliaSim. The type of the topic has to be std_msgs/msg/Float64MultiArray.</li>
+<li><b>joint_state_topic</b>: Used to specify the name of the topic to read joint states from CoppeliaSim. The type of the topic has to be sensor_msgs/msg/JointState.</li>
 </ul>
-<p>The supported interfaces for joints are the ones supported by the JointState msg:</p><ul>
+<p>The supported interfaces for joints are the ones supported by the JointState message:</p><ul>
 <li><b>position</b></li>
 <li><b>velocity</b></li>
 <li><b>effort</b></li>
 </ul>
-<p>For sensors you can declare any type of state interface, an associated cmd interface will be created so that the values can be update using a standard ros2 forward controller or a custom made one, if needed. This has the the same effect as setting to true mock_sensor_commands in the ros2 mock_components/GenericSystem</p>
+<p>For sensors, you can declare any type of state interface. An associated command interface will be created so that the values can be updated using a standard ros2 forward controller or a custom made one, if needed. This has the same effect as setting to true mock_sensor_commands in the ros2 mock_components/GenericSystem.</p>
 <h1><a class="anchor" id="brief_ex"></a>
 Example usage</h1>
-<p>This is a minimal example of a System that uses this interface, declared inside a urdf</p>
+<p>This is a minimal example of a system that uses this interface, declared inside a URDF.</p>
 <pre class="fragment">   &lt;ros2_control name="my_robot" type="system"&gt;
        &lt;hardware&gt;
            &lt;plugin&gt;coppelia_components/TopicSystem&lt;/plugin&gt;

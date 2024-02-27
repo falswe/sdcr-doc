@@ -82,30 +82,31 @@ $(document).ready(function() { init_codefold(0); });
 </div><!--header-->
 <div class="contents">
 <a href="read__coppelia__human__data_8hpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment">// NOTE: non-standard pragma</span></div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#pragma once</span></div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &lt;human_msgs/msg/human.hpp&gt;</span></div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="comment">// NOTE: Non-standard pragma</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> </div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &lt;human_msgs/msg/human.hpp&gt;</span></div>
 <div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &quot;behaviortree_ros2/bt_action_node.hpp&quot;</span></div>
 <div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &quot;behaviortree_ros2/bt_topic_sub_node.hpp&quot;</span></div>
 <div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#include &quot;behaviortree_ros2/plugins.hpp&quot;</span></div>
 <div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
-<div class="foldopen" id="foldopen00017" data-start="{" data-end="};">
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno"><a class="line" href="classread__coppelia__human__data.html">   17</a></span><span class="keyword">class </span><a class="code hl_class" href="classread__coppelia__human__data.html">read_coppelia_human_data</a>: <span class="keyword">public</span> BT::RosTopicSubNode&lt;human_msgs::msg::Human&gt;{</div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="keyword">public</span>:</div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    <span class="keyword">using </span>human_msg = human_msgs::msg::Human;</div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    <a class="code hl_class" href="classread__coppelia__human__data.html">read_coppelia_human_data</a>(<span class="keyword">const</span> std::string&amp;, <span class="keyword">const</span> BT::NodeConfig&amp;, <span class="keyword">const</span> BT::RosNodeParams&amp;);</div>
+<div class="foldopen" id="foldopen00018" data-start="{" data-end="};">
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="classread__coppelia__human__data.html">   18</a></span><span class="keyword">class </span><a class="code hl_class" href="classread__coppelia__human__data.html">read_coppelia_human_data</a></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    : <span class="keyword">public</span> BT::RosTopicSubNode&lt;human_msgs::msg::Human&gt; {</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    <span class="keyword">using </span>human_msg = human_msgs::msg::Human;</div>
 <div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    <span class="keyword">static</span> BT::PortsList <a class="code hl_function" href="classread__coppelia__human__data.html#a8ea821a73d14df1ed2546a682d066dd1">providedPorts</a>();</div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    BT::NodeStatus <a class="code hl_function" href="classread__coppelia__human__data.html#adfc22a69abecea3a5610d2d81d773f46">onTick</a>(<span class="keyword">const</span> std::shared_ptr&lt;human_msg&gt;&amp;) <span class="keyword">override</span>;</div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>};</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    <a class="code hl_class" href="classread__coppelia__human__data.html">read_coppelia_human_data</a>(<span class="keyword">const</span> std::string &amp;, <span class="keyword">const</span> BT::NodeConfig &amp;,</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>                             <span class="keyword">const</span> BT::RosNodeParams &amp;);</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    <span class="keyword">static</span> BT::PortsList <a class="code hl_function" href="classread__coppelia__human__data.html#a8ea821a73d14df1ed2546a682d066dd1">providedPorts</a>();</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    BT::NodeStatus <a class="code hl_function" href="classread__coppelia__human__data.html#adfc22a69abecea3a5610d2d81d773f46">onTick</a>(<span class="keyword">const</span> std::shared_ptr&lt;human_msg&gt; &amp;) <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>};</div>
 </div>
-<div class="ttc" id="aclassread__coppelia__human__data_html"><div class="ttname"><a href="classread__coppelia__human__data.html">read_coppelia_human_data</a></div><div class="ttdoc">node tree to publish in the blackboard the cylinder position from the CoppeliaSim topic</div><div class="ttdef"><b>Definition</b> read_coppelia_human_data.hpp:17</div></div>
-<div class="ttc" id="aclassread__coppelia__human__data_html_a8ea821a73d14df1ed2546a682d066dd1"><div class="ttname"><a href="classread__coppelia__human__data.html#a8ea821a73d14df1ed2546a682d066dd1">read_coppelia_human_data::providedPorts</a></div><div class="ttdeci">static BT::PortsList providedPorts()</div><div class="ttdoc">override of the helper function of behaviour trees used to tell which part of the blackboard the node...</div><div class="ttdef"><b>Definition</b> read_coppelia_human_data.cpp:23</div></div>
-<div class="ttc" id="aclassread__coppelia__human__data_html_adfc22a69abecea3a5610d2d81d773f46"><div class="ttname"><a href="classread__coppelia__human__data.html#adfc22a69abecea3a5610d2d81d773f46">read_coppelia_human_data::onTick</a></div><div class="ttdeci">BT::NodeStatus onTick(const std::shared_ptr&lt; human_msg &gt; &amp;) override</div><div class="ttdoc">if a msg containing the human data has arrived it is published in the blackboard</div><div class="ttdef"><b>Definition</b> read_coppelia_human_data.cpp:32</div></div>
+<div class="ttc" id="aclassread__coppelia__human__data_html"><div class="ttname"><a href="classread__coppelia__human__data.html">read_coppelia_human_data</a></div><div class="ttdoc">Node tree to publish in the blackboard the cylinder position from the CoppeliaSim topic.</div><div class="ttdef"><b>Definition</b> read_coppelia_human_data.hpp:19</div></div>
+<div class="ttc" id="aclassread__coppelia__human__data_html_a8ea821a73d14df1ed2546a682d066dd1"><div class="ttname"><a href="classread__coppelia__human__data.html#a8ea821a73d14df1ed2546a682d066dd1">read_coppelia_human_data::providedPorts</a></div><div class="ttdeci">static BT::PortsList providedPorts()</div><div class="ttdoc">Override of the providedPorts function from behaviour trees Used to indicate which part of the blackb...</div><div class="ttdef"><b>Definition</b> read_coppelia_human_data.cpp:27</div></div>
+<div class="ttc" id="aclassread__coppelia__human__data_html_adfc22a69abecea3a5610d2d81d773f46"><div class="ttname"><a href="classread__coppelia__human__data.html#adfc22a69abecea3a5610d2d81d773f46">read_coppelia_human_data::onTick</a></div><div class="ttdeci">BT::NodeStatus onTick(const std::shared_ptr&lt; human_msg &gt; &amp;) override</div><div class="ttdoc">If a message containing the human data has arrived, it is published in the blackboard.</div><div class="ttdef"><b>Definition</b> read_coppelia_human_data.cpp:42</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

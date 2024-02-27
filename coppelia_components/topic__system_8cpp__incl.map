@@ -1,6 +1,6 @@
 <map id="/github/workspace/src/coppelia_components/src/topic_system.cpp" name="/github/workspace/src/coppelia_components/src/topic_system.cpp">
-<area shape="rect" id="Node000001" title="implementation of the TopicSystem hw interface for CoppeliaSim" alt="" coords="1668,5,1820,61"/>
-<area shape="rect" id="Node000002" href="$topic__system_8hpp.html" title="header of the TopicSystem hardware interface" alt="" coords="885,117,1062,142"/>
+<area shape="rect" id="Node000001" title="Implementation of the TopicSystem hardware interface for CoppeliaSim." alt="" coords="1668,5,1820,61"/>
+<area shape="rect" id="Node000002" href="$topic__system_8hpp.html" title="Header of the TopicSystem hardware interface." alt="" coords="885,117,1062,142"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="1668,46,1077,118,1077,113,1668,41"/>
 <area shape="rect" id="Node000009" title=" " alt="" coords="1838,198,2008,253"/>
 <area shape="poly" id="edge20_Node000001_Node000009" title=" " alt="" coords="1669,51,1610,66,1558,88,1540,101,1530,115,1528,130,1538,148,1558,162,1587,173,1663,184,1749,189,1823,195,1822,200,1748,194,1663,189,1585,178,1555,167,1534,151,1523,132,1525,113,1536,97,1555,83,1608,61,1667,45"/>

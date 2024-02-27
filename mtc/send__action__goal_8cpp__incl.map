@@ -1,6 +1,6 @@
 <map id="/github/workspace/src/mtc/mtc_client/src/send_action_goal.cpp" name="/github/workspace/src/mtc/mtc_client/src/send_action_goal.cpp">
-<area shape="rect" id="Node000001" title="implementation of the send_action_goal node" alt="" coords="525,5,690,61"/>
-<area shape="rect" id="Node000002" href="$send__action__goal_8hpp.html" title="header of the specialized send_action_goal tree node that sends the request to the action server" alt="" coords="530,109,685,150"/>
+<area shape="rect" id="Node000001" title="Implementation of the send_action_goal node." alt="" coords="525,5,690,61"/>
+<area shape="rect" id="Node000002" href="$send__action__goal_8hpp.html" title="Header file for the specialized send_action_goal tree node that sends the request to the action serve..." alt="" coords="530,109,685,150"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="610,62,610,94,605,94,605,62"/>
 <area shape="rect" id="Node000003" title=" " alt="" coords="5,198,165,238"/>
 <area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="530,144,181,200,180,195,529,139"/>

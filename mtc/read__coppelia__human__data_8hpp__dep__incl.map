@@ -1,5 +1,5 @@
 <map id="/github/workspace/src/mtc/mtc_client/include/mtc_client/read_coppelia_human_data.hpp" name="/github/workspace/src/mtc/mtc_client/include/mtc_client/read_coppelia_human_data.hpp">
-<area shape="rect" id="Node000001" title="header of the specialized read_coppelia_human_data tree node that reads the human position from Coppe..." alt="" coords="10,5,179,76"/>
-<area shape="rect" id="Node000002" href="$read__coppelia__human__data_8cpp.html" title="implementation of the read_coppelia_human_data node" alt="" coords="5,124,184,180"/>
+<area shape="rect" id="Node000001" title="Header of the specialized read_coppelia_human_data tree node that reads the human position from Coppe..." alt="" coords="10,5,179,76"/>
+<area shape="rect" id="Node000002" href="$read__coppelia__human__data_8cpp.html" title="Implementation of the read_coppelia_human_data node." alt="" coords="5,124,184,180"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="97,92,97,124,92,124,92,92"/>
 </map>

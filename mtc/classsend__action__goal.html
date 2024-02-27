@@ -78,7 +78,7 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
-<p>node tree to send a request to the action server that moves the robot  
+<p>Node in the tree responsible for sending a request to the action server to move the robot.  
  <a href="classsend__action__goal.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="send__action__goal_8hpp_source.html">send_action_goal.hpp</a>&gt;</code></p>
@@ -87,7 +87,7 @@ Inheritance diagram for send_action_goal:</div>
 <div class="dyncontent">
 <div class="center"><img src="classsend__action__goal__inherit__graph.png" border="0" usemap="#asend__action__goal_inherit__map" alt="Inheritance graph"/></div>
 <map name="asend__action__goal_inherit__map" id="asend__action__goal_inherit__map">
-<area shape="rect" title="node tree to send a request to the action server that moves the robot" alt="" coords="16,109,138,135"/>
+<area shape="rect" title="Node in the tree responsible for sending a request to the action server to move the robot." alt="" coords="16,109,138,135"/>
 <area shape="rect" title=" " alt="" coords="5,5,149,61"/>
 <area shape="poly" title=" " alt="" coords="80,76,80,108,74,108,74,76"/>
 </map>
@@ -97,7 +97,7 @@ Collaboration diagram for send_action_goal:</div>
 <div class="dyncontent">
 <div class="center"><img src="classsend__action__goal__coll__graph.png" border="0" usemap="#asend__action__goal_coll__map" alt="Collaboration graph"/></div>
 <map name="asend__action__goal_coll__map" id="asend__action__goal_coll__map">
-<area shape="rect" title="node tree to send a request to the action server that moves the robot" alt="" coords="16,109,138,135"/>
+<area shape="rect" title="Node in the tree responsible for sending a request to the action server to move the robot." alt="" coords="16,109,138,135"/>
 <area shape="rect" title=" " alt="" coords="5,5,149,61"/>
 <area shape="poly" title=" " alt="" coords="80,76,80,108,74,108,74,76"/>
 </map>
@@ -118,29 +118,29 @@ using&#160;</td><td class="memItemRight" valign="bottom"><b>command</b> = action
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a8bb475d9520373edcdda7a8e2a6cbfd8" id="r_a8bb475d9520373edcdda7a8e2a6cbfd8"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsend__action__goal.html#a8bb475d9520373edcdda7a8e2a6cbfd8">send_action_goal</a> (const std::string &amp;, const BT::NodeConfig &amp;, const BT::RosNodeParams &amp;)</td></tr>
-<tr class="memdesc:a8bb475d9520373edcdda7a8e2a6cbfd8"><td class="mdescLeft">&#160;</td><td class="mdescRight">constructor of the tree node  <br /></td></tr>
+<tr class="memdesc:a8bb475d9520373edcdda7a8e2a6cbfd8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor of the tree node.  <br /></td></tr>
 <tr class="separator:a8bb475d9520373edcdda7a8e2a6cbfd8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4b42641a05f0de8efcb0bd437ffbe805" id="r_a4b42641a05f0de8efcb0bd437ffbe805"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsend__action__goal.html#a4b42641a05f0de8efcb0bd437ffbe805">setGoal</a> (RosActionNode::Goal &amp;goal) override</td></tr>
-<tr class="memdesc:a4b42641a05f0de8efcb0bd437ffbe805"><td class="mdescLeft">&#160;</td><td class="mdescRight">sets the values in the blackboard of the tree to use as goal positions of the robot  <br /></td></tr>
+<tr class="memdesc:a4b42641a05f0de8efcb0bd437ffbe805"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the values in the blackboard of the tree to use as goal positions of the robot.  <br /></td></tr>
 <tr class="separator:a4b42641a05f0de8efcb0bd437ffbe805"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9452b8698f8c3f4859e00936c41efee1" id="r_a9452b8698f8c3f4859e00936c41efee1"><td class="memItemLeft" align="right" valign="top">BT::NodeStatus&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsend__action__goal.html#a9452b8698f8c3f4859e00936c41efee1">onResultReceived</a> (const WrappedResult &amp;) override</td></tr>
-<tr class="memdesc:a9452b8698f8c3f4859e00936c41efee1"><td class="mdescLeft">&#160;</td><td class="mdescRight">outputs a log stating the esit of the action required by the client  <br /></td></tr>
+<tr class="memdesc:a9452b8698f8c3f4859e00936c41efee1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Outputs a log indicating the result of the action required by the client.  <br /></td></tr>
 <tr class="separator:a9452b8698f8c3f4859e00936c41efee1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aec052ba2f6d81f0cae5ea1fab15f541c" id="r_aec052ba2f6d81f0cae5ea1fab15f541c"><td class="memItemLeft" align="right" valign="top">virtual BT::NodeStatus&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsend__action__goal.html#aec052ba2f6d81f0cae5ea1fab15f541c">onFailure</a> (BT::ActionNodeErrorCode error) override</td></tr>
-<tr class="memdesc:aec052ba2f6d81f0cae5ea1fab15f541c"><td class="mdescLeft">&#160;</td><td class="mdescRight">defines the behaviour of the node in case of failure  <br /></td></tr>
+<tr class="memdesc:aec052ba2f6d81f0cae5ea1fab15f541c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Defines the behavior of the node in case of failure.  <br /></td></tr>
 <tr class="separator:aec052ba2f6d81f0cae5ea1fab15f541c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae956e297a767114097dc8daa94414f25" id="r_ae956e297a767114097dc8daa94414f25"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsend__action__goal.html#ae956e297a767114097dc8daa94414f25">onHalt</a> () override</td></tr>
-<tr class="memdesc:ae956e297a767114097dc8daa94414f25"><td class="mdescLeft">&#160;</td><td class="mdescRight">defines the behaviour of the node in case of halt  <br /></td></tr>
+<tr class="memdesc:ae956e297a767114097dc8daa94414f25"><td class="mdescLeft">&#160;</td><td class="mdescRight">Defines the behavior of the node in case of halt.  <br /></td></tr>
 <tr class="separator:ae956e297a767114097dc8daa94414f25"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
 <tr class="memitem:adc8e352e3f0bf7f1e65f57751b1ed7bd" id="r_adc8e352e3f0bf7f1e65f57751b1ed7bd"><td class="memItemLeft" align="right" valign="top">static BT::PortsList&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsend__action__goal.html#adc8e352e3f0bf7f1e65f57751b1ed7bd">providedPorts</a> ()</td></tr>
-<tr class="memdesc:adc8e352e3f0bf7f1e65f57751b1ed7bd"><td class="mdescLeft">&#160;</td><td class="mdescRight">override of the helper function of behaviour trees used to tell which part of the blackboard the node can access  <br /></td></tr>
+<tr class="memdesc:adc8e352e3f0bf7f1e65f57751b1ed7bd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Override of the helper function of behaviour trees Used to define which part of the blackboard the node can access.  <br /></td></tr>
 <tr class="separator:adc8e352e3f0bf7f1e65f57751b1ed7bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>node tree to send a request to the action server that moves the robot </p>
+<div class="textblock"><p>Node in the tree responsible for sending a request to the action server to move the robot. </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a8bb475d9520373edcdda7a8e2a6cbfd8" name="a8bb475d9520373edcdda7a8e2a6cbfd8"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a8bb475d9520373edcdda7a8e2a6cbfd8">&#9670;&#160;</a></span>send_action_goal()</h2>
@@ -174,12 +174,12 @@ Static Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>constructor of the tree node </p>
+<p>Constructor of the tree node. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">name</td><td>node name </td></tr>
-    <tr><td class="paramname">conf</td><td>configuration of the node </td></tr>
-    <tr><td class="paramname">params</td><td>paramters of the node </td></tr>
+    <tr><td class="paramname">name</td><td>Node name </td></tr>
+    <tr><td class="paramname">conf</td><td>Configuration of the node </td></tr>
+    <tr><td class="paramname">params</td><td>Parameters of the node </td></tr>
   </table>
   </dd>
 </dl>
@@ -211,14 +211,14 @@ Static Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>defines the behaviour of the node in case of failure </p>
+<p>Defines the behavior of the node in case of failure. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">error</td><td>error code</td></tr>
+    <tr><td class="paramname">error</td><td>Error code</td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section note"><dt>Note</dt><dd>Callback invoked when there was an error at the level of the communication between client and server. In case of failure the node outputs a log to the user </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>Callback invoked when there was an error in the communication between client and server In case of failure, the node outputs a log to the user </dd></dl>
 
 </div>
 </div>
@@ -245,8 +245,8 @@ Static Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>defines the behaviour of the node in case of halt </p>
-<dl class="section note"><dt>Note</dt><dd>called by other nodes of the tree to halt the execution of this node while it's in RUNNING status. The halt is triggered if the human moves from the goal position In case of halt the node outputs a log to the user </dd></dl>
+<p>Defines the behavior of the node in case of halt. </p>
+<dl class="section note"><dt>Note</dt><dd>Called by other nodes of the tree to halt the execution of this node while it's in RUNNING status. The halt is triggered if the human moves from the goal position. In case of halt, the node outputs a log to the user </dd></dl>
 
 </div>
 </div>
@@ -274,14 +274,14 @@ Static Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>outputs a log stating the esit of the action required by the client </p>
+<p>Outputs a log indicating the result of the action required by the client. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">wr</td><td>the result of the action</td></tr>
+    <tr><td class="paramname">wr</td><td>The result of the action</td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section note"><dt>Note</dt><dd>Callback executed when the reply is received. </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>Callback executed when the reply is received </dd></dl>
 
 </div>
 </div>
@@ -308,8 +308,8 @@ Static Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>override of the helper function of behaviour trees used to tell which part of the blackboard the node can access </p>
-<dl class="section note"><dt>Note</dt><dd>The specific ports of this Derived class should be merged with the ports of the base class, using RosActionNode::providedBasicPorts() </dd></dl>
+<p>Override of the helper function of behaviour trees Used to define which part of the blackboard the node can access. </p>
+<dl class="section note"><dt>Note</dt><dd>The specific ports of this Derived class should be merged with the ports of the base class using RosActionNode::providedBasicPorts() </dd></dl>
 
 </div>
 </div>
@@ -337,10 +337,10 @@ Static Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>sets the values in the blackboard of the tree to use as goal positions of the robot </p>
+<p>Sets the values in the blackboard of the tree to use as goal positions of the robot. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">goal</td><td>variable containing the necessary data</td></tr>
+    <tr><td class="paramname">goal</td><td>Variable containing the necessary data</td></tr>
   </table>
   </dd>
 </dl>
